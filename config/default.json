@@ -1,5 +1,6 @@
 {
   "port": 5000,
+  "jwtSecret": "AnyString",
   "mongoUri": "mongodb+srv://admin-db:23yI9vh4IVD4mnTT@cluster0.odk9uur.mongodb.net/?retryWrites=true&w=majority",
   "mongoUri2": "mongodb+srv://admin-db:23yI9vh4IVD4mnTT@cluster0.odk9uur.mongodb.net/"
 }
