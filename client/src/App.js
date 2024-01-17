@@ -1,15 +1,11 @@
 import "materialize-css"
-import AuthPage from "./pages/AuthPage"
-import CreatePage from "./pages/CreatePage"
-import DetailPage from "./pages/DetailPage"
-import LinksPage from "./pages/LinksPage"
+import { useRoutes } from "./routes"
 
 function App() {
-  return (
-    <div className="container">
-      <h1>REACT</h1>
-    </div>
-  )
+  const routes = useRoutes(false)
+  return <div className="container">{routes}</div>
 }
 
 export default App
+
+// 1:26:00
