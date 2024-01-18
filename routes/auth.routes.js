@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken")
 const { check, validationResult } = require("express-validator")
 const config = require("config")
 const User = require("../models/User")
+
 const router = Router()
 
 // /api/auth/register
@@ -96,7 +97,7 @@ router.post(
         })
       }
       // створюємо токен за допомогою бібліотеки jsonwebtoken
-      const token = jwt.sign({ userId: user.id }, config.get("jwtSevret"), {
+      const token = jwt.sign({ userId: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       })
 

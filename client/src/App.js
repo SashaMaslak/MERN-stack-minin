@@ -1,11 +1,26 @@
-import "materialize-css"
+import { BrowserRouter as Router } from "react-router-dom"
 import { useRoutes } from "./routes"
+import { useAuth } from "./hooks/auth.hook"
+import { AuthContext } from "./context/AuthContext"
+import { Navbar } from "./components/Navbar"
+import "materialize-css"
 
 function App() {
-  const routes = useRoutes(false)
-  return <div className="container">{routes}</div>
+  const { token, login, logout, userId } = useAuth()
+  const isAuthentificated = !!token
+  const routes = useRoutes(isAuthentificated)
+  return (
+    <AuthContext.Provider
+      value={{ token, login, logout, userId, isAuthentificated }}
+    >
+      <Router>
+        {isAuthentificated && <Navbar />}
+        <div className="container">{routes}</div>
+      </Router>
+    </AuthContext.Provider>
+  )
 }
 
 export default App
 
-// 1:26:00
+// 2:11:20
