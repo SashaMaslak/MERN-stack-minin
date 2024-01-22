@@ -49,6 +49,7 @@ const AuthPage = () => {
                   name="email"
                   className="yellow-input"
                   onChange={changeHanlder}
+                  value={form.email}
                 />
                 <label htmlFor="email">Email</label>
               </div>
@@ -60,6 +61,7 @@ const AuthPage = () => {
                   name="password"
                   className="yellow-input"
                   onChange={changeHanlder}
+                  value={form.password}
                 />
                 <label htmlFor="password">Password</label>
               </div>
