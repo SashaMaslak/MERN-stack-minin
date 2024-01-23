@@ -131,6 +131,7 @@ dist
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+.idea
 /node_modules
 /.pnp
 .pnp.js
@@ -140,6 +141,7 @@ dist
 
 # production
 /build
+build
 
 # misc
 .DS_Store

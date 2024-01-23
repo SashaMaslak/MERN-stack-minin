@@ -34,49 +34,49 @@ const AuthPage = () => {
   }
 
   return (
-    <div className="row">
-      <div className="col s6 offset-s3">
-        <h2>Скоротити посилання</h2>
-        <div className="card blue darken-1">
-          <div className="card-content white-text">
-            <span className="card-title">Authorization</span>
+    <div className='row'>
+      <div className='col s6 offset-s3'>
+        <h2 className='center'>Shorten your link</h2>
+        <div className='card blue darken-1'>
+          <div className='card-content white-text'>
+            <span className='card-title'>Authorization</span>
             <div>
-              <div className="input-field">
+              <div className='input-field'>
                 <input
-                  placeholder="Enter email"
-                  id="email"
-                  type="text"
-                  name="email"
-                  className="yellow-input"
+                  placeholder='Enter email'
+                  id='email'
+                  type='text'
+                  name='email'
+                  className='yellow-input'
                   onChange={changeHanlder}
                   value={form.email}
                 />
-                <label htmlFor="email">Email</label>
+                <label htmlFor='email'>Email</label>
               </div>
-              <div className="input-field">
+              <div className='input-field'>
                 <input
-                  placeholder="Enter password"
-                  id="password"
-                  type="password"
-                  name="password"
-                  className="yellow-input"
+                  placeholder='Enter password'
+                  id='password'
+                  type='password'
+                  name='password'
+                  className='yellow-input'
                   onChange={changeHanlder}
                   value={form.password}
                 />
-                <label htmlFor="password">Password</label>
+                <label htmlFor='password'>Password</label>
               </div>
             </div>
           </div>
-          <div className="card-action">
+          <div className='card-action'>
             <button
-              className="btn yellow darken-4"
+              className='btn yellow darken-2'
               style={{ marginRight: 10 }}
               onClick={loginHandler}
             >
               Sign in
             </button>
             <button
-              className="btn grey lighten-1 black-text"
+              className='btn grey lighten-1 black-text'
               onClick={registerHandler}
               disabled={loading}
             >

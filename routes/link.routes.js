@@ -11,7 +11,7 @@ router.post("/generate", auth, async (req, res) => {
     const baseUrl = config.get("baseUrl")
     const { from } = req.body
 
-    const code = nanoid(12)
+    const code = nanoid(8)
     console.log("code:", code)
     const existing = await Link.findOne({ from })
     console.log("first")
